@@ -1,0 +1,97 @@
+name: Propose a talk / workshop
+description: "Propose a talk or workshop for upcoming meetup/event"
+labels:
+- talk-proposal
+assignees: []
+body:
+- type: markdown
+  attributes:
+    value: |
+      👋 Thank you for showing interest in submitting a talk. You can
+      submit any talks which are in or related to the theme of the meetup.
+      It can be anything from geospatial programming, climate tech, remote sensing
+      maps, data visualisation.
+- type: input
+  id: title
+  attributes:
+    label: Title of the talk
+    description: "Please include a short title"
+  validations:
+    required: true
+
+- type: textarea
+  id: description
+  attributes:
+    label: Description
+    description: "Please include brief abstract about your talk"
+  validations:
+    required: true
+
+- type: dropdown
+  id: format
+  attributes:
+    label: What format do you have in mind for your talk?
+    options:
+      - Talk
+      - Workshop
+  validations:
+    required: true
+
+- type: textarea
+  id: toc
+  attributes:
+    label: Table of contents
+    description: "Please add an outline of your talk"
+    placeholder: |
+      A few bullet points which you will be covering during the talk
+      can be added here. You can update this later as well.
+  validations:
+    required: true
+
+- type: input
+  id: duration
+  attributes:
+    label: "Duration in minutes (including Q&A)"
+    description: "Please add estimated duration of the talk including Q&A"
+  validations:
+    required: true
+
+- type: textarea
+  id: prerequisites
+  attributes:
+    label: Prerequisites
+    description: "Any specific requirement from audience for the talk?"
+    placeholder: |
+      If you have any prerequisites like software, tools set up on
+      machine etc, please include it here.
+
+- type: textarea
+  id: bio
+  attributes:
+    label: Speaker bio
+    description: "Please add your introduction"
+    placeholder: |
+      Also add link to your Twitter (make sure you follow letstalkspatial
+      so that we can DM you there) or LinkedIn so that we can
+      coordinate with you before the event. If you don't want to share
+      any of the above, please send a direct message to any of the 
+      volunteers on slack.
+  validations:
+    required: true
+
+- type: checkboxes
+  id: req
+  attributes:
+    label: The talk/workshop speaker agrees to
+    description: "You can keep the fields unchecked on which you don't agree."
+    options:
+    - label: "Share the slides, code snippets and other material used during the talk"
+      required: true
+    - label: |
+        If the talk is recorded, you grant the permission to release
+        the video on [let's Talk Spatial YouTube
+        channel](https://www.youtube.com/@letstalkspatial)
+        under [CC-BY-4.0
+        license](https://creativecommons.org/licenses/by/4.0/)
+
+      required: true
